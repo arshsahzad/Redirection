@@ -1,27 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400);
+html,
 body {
-  background-color: #bbbbbb;
+  height: 100%;
 }
-h5 {
-  color: #343a40;
+
+body {
+  background: radial-gradient(#222922, #000500);
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  overflow: hidden;
+  padding: 30px 0 0 30px;
+  text-align: center;
 }
-.name {
-  color: #343a40;
+
+.word {
+  bottom: 0;
+  color: #fff;
+  font-size: 2.5em;
+  height: 2.5em;
+  left: 0;
+  line-height: 2.5em;
+  margin: auto;
+  right: 0;
+  position: absolute;
+  text-shadow: 0 0 10px rgba(50, 255, 50, 0.5), 0 0 5px rgba(100, 255, 100, 0.5);
+  top: 0;
 }
-.love {
-  color: #343a40 !important;
+
+.word span {
+  display: inline-block;
+  transform: translateX(100%) scale(0.9);
+  transition: transform 500ms;
 }
-/*----------------- Mail-------------------- */
-#email {
-  text-decoration: none;
-  float: right;
-  color: #343a40;
+
+.word .done {
+  color: #6f6;
+  transform: translateX(0) scale(1);
 }
-.footer {
-  margin-top: 5% !important;
-  margin-bottom: 10px;
-}
-@media (max-width: 479px) {
-  .footer {
-    margin-top: 35% !important;
-  }
+
+.overlay {
+  background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.5) 50%);
+  background-size: 1000px 2px;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
